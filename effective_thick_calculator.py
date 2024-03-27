@@ -192,11 +192,11 @@ class Loss:
 def main():
     parser = argparse.ArgumentParser(
         description="effective_thick_calculator: it finds optimal source thick for efficiency recalculation to another material")
-    parser.add_argument("source_efficiency_filename", help="filename with source efficiency with material 1")
-    parser.add_argument("target_efficiency_filename", help="filename with target efficiency with material 2")
+    parser.add_argument("source_efficiency_filename", help="filename *.efr with source efficiency with material 1")
+    parser.add_argument("target_efficiency_filename", help="filename *.efr with target efficiency with material 2")
     parser.add_argument("--path_to_xcom", "-x", default="XCOM", help="path to XCOM files with mass attenuation factors")
-    parser.add_argument("--start_thick", "-t", type=float, default=0.0, help="start thickness in cm to search, it is usually close to real thickness")
-    parser.add_argument("--alpha", type=float, default=0.0, help="regularization parameter to limit calculated thick")
+    parser.add_argument("--start_thick", "-t", type=float, default=0.0, help="start thickness in cm to search, it is usually close to the real thickness")
+    parser.add_argument("--alpha", type=float, default=0.0, help="regularization parameter to limit calculated thickness")
     # parser.add_argument("--save_converted_efficiency to efr", action="store_true")
     args = parser.parse_args()
 
