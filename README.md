@@ -32,9 +32,8 @@ where:
 
 ## Run program and command line parameters
 
-install python dependencies (`pip install -U <dep_name>`):
-- numpy
-- scipy
+install python dependencies:
+`pip install -r requirements.txt`
 
 Run program in console (terminal):
 ```sh
